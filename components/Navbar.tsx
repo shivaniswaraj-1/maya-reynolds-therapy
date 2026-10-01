@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
@@ -10,32 +11,34 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   return (
-    <header className="bg-[#f4f1ea]">
-      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-8 py-6 md:px-14 lg:px-20">
+    <header className="bg-background">
+      <div className="mx-auto flex max-w-[1680px] items-center justify-between px-10 py-[27px] md:px-16 lg:px-20">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-serif text-[26px] text-neutral-800">
-            Conejo Valley
-          </span>
-          <span className="mt-1 text-[11px] tracking-[0.3em] text-teal-700/80">
-            FAMILY COUNSELING
-          </span>
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/conejo-logo.png"
+            alt="Conejo Valley Family Counseling"
+            width={1500}
+            height={438}
+            priority
+            className="h-[60px] w-auto sm:h-[68px] lg:h-[75px]"
+          />
         </Link>
 
         {/* Nav links + Contact */}
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-10 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-[13px] tracking-[0.15em] text-neutral-700 uppercase hover:text-neutral-900"
+              className="text-[13px] tracking-[0.1em] text-foreground uppercase hover:text-accent-teal"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="#contact"
-            className="rounded-full border border-neutral-700 px-6 py-2.5 text-[13px] tracking-[0.15em] text-neutral-800 uppercase hover:bg-neutral-800 hover:text-[#f4f1ea]"
+            className="rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase hover:bg-foreground hover:text-background"
           >
             Contact
           </Link>
