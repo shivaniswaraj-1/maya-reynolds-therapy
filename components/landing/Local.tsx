@@ -16,8 +16,8 @@ export default function Local() {
       </div>
 
       <h2 className="mt-[11px] px-gutter font-serif text-h2 font-extralight text-primary md:col-[16/26] md:mt-0 md:self-end md:px-0">
-        A calm therapy office in Santa Monica <span className="script">&amp;</span>{" "}
-        secure telehealth across California.
+        Rooted in Santa Monica <span className="script">&amp;</span>{" "}
+        available by telehealth across California.
       </h2>
     </section>
   );

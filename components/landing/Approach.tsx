@@ -41,11 +41,11 @@ export default function Approach() {
 
       <div className="relative mt-[47px] aspect-[343/269] [grid-area:img] md:col-[21/27] md:row-[1/5] md:mt-0 md:ml-[6.3px] md:aspect-auto md:min-h-(--how-img-min)">
         <Image
-          src="/images/office-therapy-room.jpg"
-          alt="Dr. Reynolds’ Santa Monica therapy room with a sofa, leather armchair, olive tree, and bookshelves"
+          src="/images/quiet-shore.jpg"
+          alt="A quiet stretch of beach with dune grass and calm water"
           fill
           sizes="(min-width: 768px) 24vw, 88vw"
-          className="object-cover object-[38%_50%]"
+          className="object-cover"
         />
       </div>
     </section>

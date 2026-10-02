@@ -10,6 +10,7 @@ import QuoteBand from "@/components/landing/QuoteBand";
 import MeetMaya from "@/components/landing/MeetMaya";
 import HelpWith from "@/components/landing/HelpWith";
 import Approach from "@/components/landing/Approach";
+import OurOffice from "@/components/landing/OurOffice";
 import Local from "@/components/landing/Local";
 import Methods from "@/components/landing/Methods";
 import Faqs from "@/components/landing/Faqs";
@@ -111,6 +112,9 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <Approach />
+        </Reveal>
+        <Reveal>
+          <OurOffice />
         </Reveal>
         <Reveal>
           <Local />

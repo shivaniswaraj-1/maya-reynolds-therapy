@@ -33,11 +33,11 @@ export default function Struggle() {
 
       <div className="relative mt-[45px] aspect-[343/234] [grid-area:img] md:col-[19/27] md:row-[1/3] md:mt-0 md:ml-[5.7px] md:aspect-auto md:min-h-(--hope-img-min)">
         <Image
-          src="/images/window-reflection.jpg"
-          alt="Woman sitting quietly by a sunlit window, taking a moment to reflect"
+          src="/images/sea-breeze.jpg"
+          alt="Woman with eyes closed, breathing in the sea breeze at dusk"
           fill
           sizes="(min-width: 768px) 31vw, 88vw"
-          className="object-cover object-[45%_50%]"
+          className="object-cover object-[55%_50%]"
         />
       </div>
     </section>

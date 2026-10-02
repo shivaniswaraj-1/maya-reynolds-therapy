@@ -13,12 +13,12 @@ export default function Hero() {
     >
       <div className="relative order-3 mt-[59px] aspect-[278/304] md:order-none md:col-[1/10] md:row-[1/4] md:mt-0 md:aspect-auto md:min-h-(--hero-img-min)">
         <Image
-          src="/images/office-sunlit.jpg"
-          alt="Sunlit seating area in Dr. Maya Reynolds’ Santa Monica therapy office, with tall windows and exposed brick"
+          src="/images/window-reflection.jpg"
+          alt="Woman sitting quietly by a sunlit window, taking a calm moment for herself"
           fill
           priority
           sizes="(min-width: 768px) 35vw, 72vw"
-          className="object-cover object-[60%_50%]"
+          className="object-cover object-[40%_50%]"
         />
       </div>
 
