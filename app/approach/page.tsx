@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ApproachPage() {
   return (
-    <div className="flex flex-col bg-background">
+    <div className="flex flex-col bg-canvas">
       <Navbar />
       <div className="flex min-h-[calc(100svh-96px)] flex-1 flex-col lg:min-h-[calc(100svh-112px)]">
         <PageHero
@@ -28,7 +28,7 @@ export default function ApproachPage() {
           }
           intro="Sessions are structured enough to feel supportive, while still leaving space for reflection and depth."
           image={{
-            src: "/office-2.jpeg",
+            src: "/images/office-therapy-room.jpg",
             alt: "Therapy room with a grey sofa, leather armchair, olive tree, and bookshelves",
             position: "object-[40%_50%]",
           }}

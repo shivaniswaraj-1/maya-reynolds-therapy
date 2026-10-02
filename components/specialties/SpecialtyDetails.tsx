@@ -61,43 +61,43 @@ export const SPECIALTIES = [
 
 export default function SpecialtyDetails() {
   return (
-    <section className="bg-background px-6 py-20 sm:px-10 md:px-16 md:py-28 lg:px-[8.8%] lg:py-32">
+    <section className="bg-canvas px-6 py-20 sm:px-10 md:px-16 md:py-28 lg:px-[8.8%] lg:py-32">
       <ol>
         {SPECIALTIES.map((item, i) => (
           <li
             key={item.id}
             id={item.id}
-            className="grid gap-10 border-t border-foreground/10 py-16 first:border-t-0 first:pt-0 last:pb-0 md:grid-cols-[38%_1fr] md:gap-[6%] lg:py-24"
+            className="grid gap-10 border-t border-primary/10 py-16 first:border-t-0 first:pt-0 last:pb-0 md:grid-cols-[38%_1fr] md:gap-[6%] lg:py-24"
           >
             <Reveal>
-              <span className="text-[14px] tracking-[0.2em] text-accent-teal">
+              <span className="text-[14px] tracking-[0.2em] text-accent">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h2 className="mt-4 font-serif text-[36px] font-light leading-[1.2] tracking-tight text-foreground sm:text-[44px]">
+              <h2 className="mt-4 font-serif text-[36px] font-light leading-[1.2] tracking-tight text-ink sm:text-[44px]">
                 {item.title}
               </h2>
             </Reveal>
 
             <Reveal delay={150} className="grid gap-10 lg:grid-cols-[40%_1fr] lg:gap-12">
               <div>
-                <h3 className="text-[14px] tracking-[0.15em] text-foreground uppercase">
+                <h3 className="text-[14px] tracking-[0.15em] text-ink uppercase">
                   You might notice
                 </h3>
                 <ul className="mt-5 flex flex-col gap-3">
                   {item.signs.map((sign) => (
-                    <li key={sign} className="flex gap-3 text-[17px] leading-[1.6] text-foreground">
-                      <span aria-hidden="true" className="mt-[11px] h-px w-4 shrink-0 bg-accent-teal" />
+                    <li key={sign} className="flex gap-3 text-[17px] leading-[1.6] text-ink">
+                      <span aria-hidden="true" className="mt-[11px] h-px w-4 shrink-0 bg-primary" />
                       {sign}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="flex flex-col gap-5">
-                <h3 className="text-[14px] tracking-[0.15em] text-foreground uppercase">
+                <h3 className="text-[14px] tracking-[0.15em] text-ink uppercase">
                   How we’ll work
                 </h3>
                 {item.body.map((paragraph) => (
-                  <p key={paragraph} className="text-[17px] leading-[1.8] text-foreground">
+                  <p key={paragraph} className="text-[17px] leading-[1.8] text-ink">
                     {paragraph}
                   </p>
                 ))}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 
 /*
   768px+: headline (columns 2–14) over two text columns (2–8, 9–15) beside a
@@ -11,7 +11,7 @@ import styles from "@/components/conejo/conejo.module.css";
 export default function HopeSection() {
   return (
     <section
-      className={`${styles.grid24} grid bg-background px-gutter pt-(--hope-pt) pb-(--hope-pb) [grid-template-areas:'h2'_'a'_'img'_'b'] md:grid-rows-[auto_1fr] md:gap-y-(--hope-h2-cols) md:px-0 md:[grid-template-areas:none]`}
+      className={`${styles.grid24} grid bg-cv-cream px-gutter pt-(--hope-pt) pb-(--hope-pb) [grid-template-areas:'h2'_'a'_'img'_'b'] md:grid-rows-[auto_1fr] md:gap-y-(--hope-h2-cols) md:px-0 md:[grid-template-areas:none]`}
     >
       <h2 className="font-serif text-h2 font-extralight [grid-area:h2] md:col-[3/16] md:row-[1] md:mt-(--hope-text-top)">
         You’re holding onto hope that life can be better than it is right now.

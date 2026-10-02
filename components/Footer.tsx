@@ -18,7 +18,7 @@ const SPECIALTIES = [
 
 function ColumnHeading({ children }: { children: ReactNode }) {
   return (
-    <h3 className="text-[15px] tracking-[0.15em] text-foreground uppercase">
+    <h3 className="text-[15px] tracking-[0.15em] text-ink uppercase">
       {children}
     </h3>
   );
@@ -32,7 +32,7 @@ export default function Footer() {
           <Link href="/" className="block w-fit" aria-label="Dr. Maya Reynolds, PsyD — home">
             <Logo size="footer" />
           </Link>
-          <p className="mt-8 text-[17px] leading-[1.8] text-foreground">
+          <p className="mt-8 text-[17px] leading-[1.8] text-ink">
             Therapy for adults navigating anxiety, trauma, and burnout. In
             person in Santa Monica, or by secure telehealth anywhere in
             California.
@@ -41,10 +41,10 @@ export default function Footer() {
 
         <nav>
           <ColumnHeading>Navigate</ColumnHeading>
-          <ul className="mt-5 flex flex-col gap-1 text-[16px] leading-[1.7] text-foreground">
+          <ul className="mt-5 flex flex-col gap-1 text-[16px] leading-[1.7] text-ink">
             {FOOTER_LINKS.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="transition-colors duration-300 hover:text-accent-teal">
+                <Link href={link.href} className="transition-colors duration-300 hover:text-accent-deep">
                   {link.label}
                 </Link>
               </li>
@@ -54,10 +54,10 @@ export default function Footer() {
 
         <div>
           <ColumnHeading>Specialties</ColumnHeading>
-          <ul className="mt-5 flex flex-col gap-1 text-[16px] leading-[1.7] text-foreground">
+          <ul className="mt-5 flex flex-col gap-1 text-[16px] leading-[1.7] text-ink">
             {SPECIALTIES.map((item) => (
               <li key={item.label}>
-                <Link href={item.href} className="transition-colors duration-300 hover:text-accent-teal">
+                <Link href={item.href} className="transition-colors duration-300 hover:text-accent-deep">
                   {item.label}
                 </Link>
               </li>
@@ -67,25 +67,25 @@ export default function Footer() {
 
         <div>
           <ColumnHeading>Office</ColumnHeading>
-          <address className="mt-5 flex flex-col gap-1 text-[16px] leading-[1.7] text-foreground not-italic">
+          <address className="mt-5 flex flex-col gap-1 text-[16px] leading-[1.7] text-ink not-italic">
             <span>{PRACTICE.street}</span>
             <span>{PRACTICE.city}</span>
             <a
               href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 w-fit border-b border-foreground/40 transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal"
+              className="mt-1 w-fit border-b border-primary/40 transition-colors duration-300 hover:border-accent-deep hover:text-accent-deep"
             >
               Get directions
             </a>
           </address>
-          <p className="mt-4 text-[16px] leading-[1.7] text-foreground italic">
+          <p className="mt-4 text-[16px] leading-[1.7] text-ink italic">
             Telehealth available for clients located in California
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col gap-1 bg-accent-teal px-6 py-4 text-[15px] text-white sm:flex-row sm:justify-between sm:px-10 md:px-16 lg:px-[6.8%]">
+      <div className="flex flex-col gap-1 bg-primary px-6 py-4 text-[15px] text-white sm:flex-row sm:justify-between sm:px-10 md:px-16 lg:px-[6.8%]">
         <span>
           &copy; {new Date().getFullYear()} {PRACTICE.name}
         </span>

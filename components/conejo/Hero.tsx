@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 import { TextLink } from "@/components/conejo/ui";
 
 /*
@@ -11,7 +11,7 @@ import { TextLink } from "@/components/conejo/ui";
 export default function Hero() {
   return (
     <section
-      className={`${styles.grid24} grid grid-cols-[71.3vw_1fr] bg-background pt-[calc(var(--header-h)_+_var(--hero-offset))] pb-(--hero-pb) md:grid-rows-[auto_minmax(calc(60px_+_3.8*var(--u)),1fr)_auto]`}
+      className={`${styles.grid24} grid grid-cols-[71.3vw_1fr] bg-cv-cream pt-[calc(var(--header-h)_+_var(--hero-offset))] pb-(--hero-pb) md:grid-rows-[auto_minmax(calc(60px_+_3.8*var(--u)),1fr)_auto]`}
     >
       <div className="relative order-3 mt-[59px] aspect-[278/304] md:order-none md:col-[1/10] md:row-[1/4] md:mt-0 md:aspect-auto md:min-h-(--hero-img-min)">
         <Image

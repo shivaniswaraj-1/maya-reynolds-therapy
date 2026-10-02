@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 
 const NAV_LINKS = ["Home", "About", "FAQs", "Contact"];
 
@@ -99,7 +99,7 @@ export default function Footer() {
         </Column>
       </div>
 
-      <div className="flex items-center bg-accent-teal px-[7.7vw] py-[8px] text-small font-light text-white md:min-h-(--footer-bar) md:px-[6.8vw] md:py-0">
+      <div className="flex items-center bg-cv-teal px-[7.7vw] py-[8px] text-small font-light text-white md:min-h-(--footer-bar) md:px-[6.8vw] md:py-0">
         <p>
           {LEGAL_LINKS.map((label) => (
             <span key={label}>

@@ -3,9 +3,9 @@ import { serif, sans, script } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dr. Maya Reynolds, PsyD | Therapy in Santa Monica, CA",
+  title: "Dr. Maya Reynolds, PsyD | Therapist in Santa Monica, CA",
   description:
-    "Licensed clinical psychologist in Santa Monica offering therapy for anxiety, panic, trauma, and burnout. In-person sessions and telehealth across California.",
+    "Licensed clinical psychologist in Santa Monica, CA, offering therapy for anxiety, panic, trauma, and burnout. In-person sessions and secure telehealth across California.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

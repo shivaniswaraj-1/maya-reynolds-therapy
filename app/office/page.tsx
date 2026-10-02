@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function OfficePage() {
   return (
-    <div className="flex flex-col bg-background">
+    <div className="flex flex-col bg-canvas">
       <Navbar />
       <div className="flex min-h-[calc(100svh-96px)] flex-1 flex-col lg:min-h-[calc(100svh-112px)]">
         <PageHero
@@ -26,7 +26,7 @@ export default function OfficePage() {
           }
           intro="See me in person at my Santa Monica office, or meet through secure telehealth from anywhere in California."
           image={{
-            src: "/office-1.jpeg",
+            src: "/images/office-sunlit.jpg",
             alt: "Sunlit sitting area with tall windows, sheer curtains, exposed brick, and a swivel armchair",
             position: "object-[65%_50%]",
           }}

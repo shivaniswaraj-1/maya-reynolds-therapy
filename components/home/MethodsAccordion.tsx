@@ -34,14 +34,14 @@ export default function MethodsAccordion() {
         const open = openIndex === i;
         const panelId = `method-panel-${i}`;
         return (
-          <li key={method.title} className="border-b border-foreground/15 last:border-b-0">
+          <li key={method.title} className="border-b border-primary/15 last:border-b-0">
             <h3>
               <button
                 type="button"
                 aria-expanded={open}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(open ? null : i)}
-                className="flex w-full items-start gap-4 py-[30px] text-left text-[14px] tracking-[0.15em] text-foreground uppercase transition-colors duration-300 hover:text-accent-teal sm:text-[15px]"
+                className="flex w-full items-start gap-4 py-[30px] text-left text-[14px] tracking-[0.15em] text-ink uppercase transition-colors duration-300 hover:text-accent-deep sm:text-[15px]"
               >
                 {/* Plus icon - the vertical stroke collapses to make a minus when open */}
                 <span className="relative mt-[3px] h-[14px] w-[14px] shrink-0" aria-hidden="true">
@@ -63,7 +63,7 @@ export default function MethodsAccordion() {
               }`}
             >
               <div className="overflow-hidden" inert={!open}>
-                <p className="pb-[30px] pl-[30px] text-[17px] leading-[1.8] text-foreground">
+                <p className="pb-[30px] pl-[30px] text-[17px] leading-[1.8] text-ink">
                   {method.description}
                 </p>
               </div>

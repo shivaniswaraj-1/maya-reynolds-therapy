@@ -21,7 +21,7 @@ const REFERRAL_OPTIONS = [
 const initialState: ContactState = { status: "idle", errors: {} };
 
 const inputClass =
-  "mt-3 w-full border border-foreground bg-[#fafafa] px-4 py-[15px] text-[16px] text-foreground transition-[border-color,box-shadow] duration-300 outline-none focus:border-accent-teal focus:ring-1 focus:ring-accent-teal aria-[invalid=true]:border-[#b4553f]";
+  "mt-3 w-full border border-primary bg-[#fafafa] px-4 py-[15px] text-[16px] text-ink transition-[border-color,box-shadow] duration-300 outline-none focus:border-primary focus:ring-1 focus:ring-accent-deep aria-[invalid=true]:border-[#b4553f]";
 
 type FieldProps = {
   name: ContactField;
@@ -39,11 +39,11 @@ function Field({ name, label, hint, error, children }: FieldProps) {
 
   return (
     <div>
-      <label htmlFor={id} className="text-[17px] leading-[1.6] text-foreground">
-        {label} <span className="text-[12px] text-foreground/60">(required)</span>
+      <label htmlFor={id} className="text-[17px] leading-[1.6] text-ink">
+        {label} <span className="text-[12px] text-ink/65">(required)</span>
       </label>
       {hint && (
-        <p id={hintId} className="mt-2 text-[13px] text-foreground/60">
+        <p id={hintId} className="mt-2 text-[13px] text-ink/65">
           {hint}
         </p>
       )}
@@ -74,7 +74,7 @@ function Select({ options, ...props }: { options: string[] } & ComponentProps<"s
       <svg
         viewBox="0 0 20 12"
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 right-4 mt-[6px] h-3 w-5 -translate-y-1/2 text-foreground"
+        className="pointer-events-none absolute top-1/2 right-4 mt-[6px] h-3 w-5 -translate-y-1/2 text-ink"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
@@ -100,11 +100,11 @@ export default function ContactForm() {
 
   if (state.status === "success") {
     return (
-      <div role="status" className="border border-foreground/15 bg-white/60 px-8 py-14 sm:px-12">
-        <h2 className="font-serif text-[34px] font-light leading-[1.3] text-foreground sm:text-[40px]">
+      <div role="status" className="border border-primary/15 bg-white/60 px-8 py-14 sm:px-12">
+        <h2 className="font-serif text-[34px] font-light leading-[1.3] text-ink sm:text-[40px]">
           Thank you for reaching out.
         </h2>
-        <p className="mt-6 text-[17px] leading-[1.8] text-foreground">
+        <p className="mt-6 text-[17px] leading-[1.8] text-ink">
           Your message has been received. I’ll be in touch soon to talk through
           next steps and whether we’re a good fit.
         </p>
@@ -116,16 +116,16 @@ export default function ContactForm() {
     <form action={formAction} onSubmit={handleSubmit} noValidate className="flex flex-col gap-9">
       {/* Name */}
       <fieldset>
-        <legend className="text-[17px] text-foreground">Name</legend>
+        <legend className="text-[17px] text-ink">Name</legend>
         <div className="mt-4 grid gap-5 sm:grid-cols-2 sm:gap-3">
           {(["firstName", "lastName"] as const).map((name) => {
             const id = `contact-${name}`;
             const error = errors[name];
             return (
               <div key={name}>
-                <label htmlFor={id} className="text-[13px] text-foreground">
+                <label htmlFor={id} className="text-[13px] text-ink">
                   {name === "firstName" ? "First Name" : "Last Name"}{" "}
-                  <span className="text-foreground/60">(required)</span>
+                  <span className="text-ink/65">(required)</span>
                 </label>
                 <input
                   id={id}
@@ -275,7 +275,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={pending}
-        className="w-fit cursor-pointer border-b border-foreground pb-2 text-[12px] tracking-[0.14em] text-foreground uppercase transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal disabled:cursor-wait disabled:opacity-60"
+        className="w-fit cursor-pointer border-b border-primary pb-2 text-[12px] tracking-[0.14em] text-ink uppercase transition-colors duration-300 hover:border-accent-deep hover:text-accent-deep disabled:cursor-wait disabled:opacity-60"
       >
         {pending ? "Sending…" : "Submit"}
       </button>

@@ -3,10 +3,10 @@ import Reveal from "@/components/Reveal";
 
 export default function BioBanner() {
   return (
-    <section className="relative h-[460px] w-full overflow-hidden bg-foreground sm:h-[540px] lg:h-[627px]">
+    <section className="relative h-[460px] w-full overflow-hidden bg-primary sm:h-[540px] lg:h-[627px]">
       <Image
-        src="/hope-ocean.jpg"
-        alt="Sandy beach with gentle ocean waves under a cloudy sky"
+        src="/images/quiet-shore.jpg"
+        alt="A quiet stretch of beach with dune grass and calm water"
         fill
         sizes="100vw"
         className="object-cover"

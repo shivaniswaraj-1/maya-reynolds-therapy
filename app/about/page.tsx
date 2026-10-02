@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col bg-background">
+    <div className="flex flex-col bg-canvas">
       <Navbar />
       {/* Hero fills the rest of the first screen below the sticky header */}
       <div className="flex min-h-[calc(100svh-96px)] flex-1 flex-col lg:min-h-[calc(100svh-112px)]">

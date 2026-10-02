@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function SpecialtiesPage() {
   return (
-    <div className="flex flex-col bg-background">
+    <div className="flex flex-col bg-canvas">
       <Navbar />
       <div className="flex min-h-[calc(100svh-96px)] flex-1 flex-col lg:min-h-[calc(100svh-112px)]">
         <PageHero
@@ -26,8 +26,8 @@ export default function SpecialtiesPage() {
           }
           intro="My work often focuses on anxiety, panic, trauma, and burnout—for adults who feel overwhelmed by stress or the lingering effects of past experiences."
           image={{
-            src: "/hope-ocean.jpg",
-            alt: "Sandy beach with gentle ocean waves under a cloudy sky",
+            src: "/images/sea-breeze.jpg",
+            alt: "Woman with eyes closed breathing in the sea breeze at dusk",
           }}
         />
       </div>

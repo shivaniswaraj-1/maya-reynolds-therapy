@@ -10,7 +10,7 @@ import HonoringSection from "@/components/conejo/HonoringSection";
 import Specialties from "@/components/conejo/Specialties";
 import ScheduleSection from "@/components/conejo/ScheduleSection";
 import Footer from "@/components/conejo/Footer";
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 
 export const metadata: Metadata = {
   title: "Conejo Valley Family Counseling | Homepage Clone",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 // Part 1 of the assignment: a recreation of conejovalleycounseling.com/home.
 export default function ConejoClonePage() {
   return (
-    <div className={`${styles.page} relative bg-white text-foreground`}>
+    <div className={`${styles.page} relative bg-white text-cv-ink [--script-color:var(--cv-teal)]`}>
       <Header />
       <main id="main">
         <Hero />

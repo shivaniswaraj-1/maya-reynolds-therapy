@@ -156,8 +156,8 @@ export default function Header() {
           onClick={() => setMenuOpen(true)}
           className="flex h-[37px] w-[47px] flex-col items-center justify-center gap-[6px] nav:hidden"
         >
-          <span className="h-px w-[35px] bg-foreground" />
-          <span className="h-px w-[35px] bg-foreground" />
+          <span className="h-px w-[35px] bg-cv-ink" />
+          <span className="h-px w-[35px] bg-cv-ink" />
         </button>
       </div>
 
@@ -168,7 +168,7 @@ export default function Header() {
         aria-modal="true"
         aria-label="Menu"
         inert={!menuOpen}
-        className={`fixed inset-0 z-40 flex flex-col bg-background transition-opacity duration-300 nav:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-cv-cream transition-opacity duration-300 nav:hidden ${
           menuOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
@@ -182,8 +182,8 @@ export default function Header() {
             onClick={closeMenu}
             className="relative flex h-[37px] w-[47px] items-center justify-center"
           >
-            <span className="absolute h-px w-[28px] rotate-45 bg-foreground" />
-            <span className="absolute h-px w-[28px] -rotate-45 bg-foreground" />
+            <span className="absolute h-px w-[28px] rotate-45 bg-cv-ink" />
+            <span className="absolute h-px w-[28px] -rotate-45 bg-cv-ink" />
           </button>
         </div>
 
@@ -238,7 +238,7 @@ export default function Header() {
           <Link
             href="#contact"
             onClick={closeMenu}
-            className="block w-full max-w-[210px] rounded-[100%] border border-foreground py-[15px] text-center text-button leading-[1.25] uppercase"
+            className="block w-full max-w-[210px] rounded-[100%] border border-cv-ink py-[15px] text-center text-button leading-[1.25] uppercase"
           >
             Contact
           </Link>

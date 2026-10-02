@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-40 bg-background transition-shadow duration-500 ${
+      className={`sticky top-0 z-40 bg-canvas transition-shadow duration-500 ${
         scrolled ? "shadow-[0_8px_24px_-18px_rgba(0,0,0,0.35)]" : ""
       }`}
     >
@@ -48,7 +48,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`${underline} text-[13px] tracking-[0.1em] text-foreground uppercase ${
+                className={`${underline} text-[13px] tracking-[0.1em] text-ink uppercase ${
                   active ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"
                 }`}
               >
@@ -59,10 +59,10 @@ export default function Navbar() {
           <Link
             href="/contact"
             aria-current={contactActive ? "page" : undefined}
-            className={`rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] uppercase transition-colors duration-300 ${
+            className={`rounded-full border border-primary px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] uppercase transition-colors duration-300 ${
               contactActive
-                ? "bg-foreground text-background"
-                : "text-foreground hover:bg-foreground hover:text-background"
+                ? "bg-primary text-canvas"
+                : "text-ink hover:bg-primary hover:text-canvas"
             }`}
           >
             Contact
@@ -79,12 +79,12 @@ export default function Navbar() {
           className="relative flex h-10 w-10 items-center justify-center md:hidden"
         >
           <span
-            className={`absolute h-px w-7 bg-foreground transition-transform duration-300 ${
+            className={`absolute h-px w-7 bg-primary transition-transform duration-300 ${
               open ? "rotate-45" : "-translate-y-[5px]"
             }`}
           />
           <span
-            className={`absolute h-px w-7 bg-foreground transition-transform duration-300 ${
+            className={`absolute h-px w-7 bg-primary transition-transform duration-300 ${
               open ? "-rotate-45" : "translate-y-[5px]"
             }`}
           />
@@ -94,7 +94,7 @@ export default function Navbar() {
       {/* Mobile menu panel */}
       <div
         id="mobile-menu"
-        className={`absolute inset-x-0 top-full grid bg-background shadow-[0_12px_24px_-16px_rgba(0,0,0,0.25)] transition-[grid-template-rows] duration-500 ease-out md:hidden ${
+        className={`absolute inset-x-0 top-full grid bg-canvas shadow-[0_12px_24px_-16px_rgba(0,0,0,0.25)] transition-[grid-template-rows] duration-500 ease-out md:hidden ${
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >
@@ -108,7 +108,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={close}
                   aria-current={active ? "page" : undefined}
-                  className={`${underline} text-[14px] tracking-[0.12em] text-foreground uppercase ${
+                  className={`${underline} text-[14px] tracking-[0.12em] text-ink uppercase ${
                     active ? "after:scale-x-100" : "after:scale-x-0"
                   }`}
                 >
@@ -120,8 +120,8 @@ export default function Navbar() {
               href="/contact"
               onClick={close}
               aria-current={contactActive ? "page" : undefined}
-              className={`mt-2 w-fit rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] uppercase ${
-                contactActive ? "bg-foreground text-background" : "text-foreground"
+              className={`mt-2 w-fit rounded-full border border-primary px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] uppercase ${
+                contactActive ? "bg-primary text-canvas" : "text-ink"
               }`}
             >
               Contact

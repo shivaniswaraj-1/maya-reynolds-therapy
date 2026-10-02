@@ -16,4 +16,5 @@ export const NAV_LINKS = [
   { label: "Specialties", href: "/specialties" },
   { label: "Approach", href: "/approach" },
   { label: "Office", href: "/office" },
+  { label: "FAQs", href: "/#faqs" },
 ];

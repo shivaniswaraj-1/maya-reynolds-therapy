@@ -1,4 +1,4 @@
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 
 // Listed row by row (left, right) as on desktop.
 const AREAS = [
@@ -48,7 +48,7 @@ export default function AreasOfExpertise() {
                 ROWS[Math.floor(i / 2)],
                 i % 2 === 0 ? "md:col-[10/17]" : "md:col-[18/25]",
                 // Divider below every item but the last (mobile) / last row (desktop).
-                "border-accent-sand/50",
+                "border-cv-sand/50",
                 i === 0 ? "" : "pt-(--areas-rule-next)",
                 i === AREAS.length - 1 ? "" : "border-b pb-(--areas-text-rule)",
                 firstRow ? "md:pt-0" : "",

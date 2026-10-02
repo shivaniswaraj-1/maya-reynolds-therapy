@@ -10,18 +10,18 @@ export default function Methods({ divider = true }: { divider?: boolean }) {
     >
       <div
         className={`grid gap-10 md:grid-cols-[40%_1fr] md:gap-0 lg:grid-cols-[50%_1fr] ${
-          divider ? "border-t border-foreground/10 pt-20 md:pt-28 lg:pt-32" : ""
+          divider ? "border-t border-primary/10 pt-20 md:pt-28 lg:pt-32" : ""
         }`}
       >
         <Reveal>
-          <h2 className="font-serif text-[40px] font-light leading-[1.35] tracking-tight text-foreground sm:text-[48px] lg:text-[56px]">
+          <h2 className="font-serif text-[40px] font-light leading-[1.35] tracking-tight text-ink sm:text-[48px] lg:text-[56px]">
             The{" "}
-            <span className="font-script text-[60px] leading-none text-accent-teal sm:text-[70px] lg:text-[80px]">
+            <span className="font-script text-[60px] leading-none text-accent sm:text-[70px] lg:text-[80px]">
               methods
             </span>
             <br />I draw on
           </h2>
-          <p className="mt-8 max-w-[460px] text-[17px] leading-[1.8] text-foreground">
+          <p className="mt-8 max-w-[460px] text-[17px] leading-[1.8] text-ink">
             Practical tools combined with depth-oriented work, tailored to what
             you need.
           </p>

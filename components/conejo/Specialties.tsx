@@ -1,4 +1,4 @@
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 import { TextLink } from "@/components/conejo/ui";
 
 // Listed row by row as on desktop; mobile reads down each column instead.

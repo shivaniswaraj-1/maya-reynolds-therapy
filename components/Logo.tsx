@@ -8,14 +8,14 @@ export default function Logo({ size = "nav" }: LogoProps) {
   return (
     <span className="flex flex-col leading-none">
       <span
-        className={`font-serif font-light tracking-tight text-foreground ${
+        className={`font-serif font-light tracking-tight text-ink ${
           footer ? "text-[44px] sm:text-[56px]" : "text-[28px] sm:text-[34px] lg:text-[38px]"
         }`}
       >
         Maya Reynolds
       </span>
       <span
-        className={`text-accent-teal uppercase ${
+        className={`text-accent-deep uppercase ${
           footer
             ? "mt-3 text-[12px] tracking-[0.42em] sm:text-[14px]"
             : "mt-1.5 text-[9px] tracking-[0.38em] sm:text-[10px]"

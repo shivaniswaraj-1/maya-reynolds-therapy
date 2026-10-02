@@ -13,21 +13,21 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col bg-background">
+    <div className="flex flex-col bg-canvas">
       <Navbar />
 
       <section className="grid gap-16 pt-10 pb-24 md:pt-16 lg:grid-cols-[42%_1fr] lg:gap-[8%] lg:pt-[60px] lg:pb-[160px]">
         {/* Intro + office details */}
         <Reveal className="lg:pt-10">
           <div className="px-6 sm:px-10 md:px-16 lg:pr-0 lg:pl-[21%]">
-            <h1 className="font-serif text-[52px] font-light leading-[1.1] tracking-tight text-foreground sm:text-[64px]">
+            <h1 className="font-serif text-[52px] font-light leading-[1.1] tracking-tight text-ink sm:text-[64px]">
               Get{" "}
-              <span className="font-script text-[72px] leading-none text-accent-teal sm:text-[96px]">
+              <span className="font-script text-[72px] leading-none text-accent sm:text-[96px]">
                 in touch
               </span>
               .
             </h1>
-            <p className="mt-10 max-w-[640px] text-[17px] leading-[1.8] text-foreground">
+            <p className="mt-10 max-w-[640px] text-[17px] leading-[1.8] text-ink">
               Use this form to tell me a little about what brings you to
               therapy. I’ll follow up to talk through next steps and whether
               we’re a good fit.
@@ -35,14 +35,14 @@ export default function ContactPage() {
           </div>
 
           {/* Divider bleeds to the left viewport edge, like the reference */}
-          <hr className="mt-14 border-foreground/15 lg:mt-28" />
+          <hr className="mt-14 border-primary/15 lg:mt-28" />
 
           <div className="px-6 pt-12 sm:px-10 md:px-16 lg:pr-0 lg:pt-16 lg:pl-[21%]">
-            <address className="flex flex-col text-[17px] leading-[1.8] text-foreground not-italic">
+            <address className="flex flex-col text-[17px] leading-[1.8] text-ink not-italic">
               <span>{PRACTICE.street}</span>
               <span>{PRACTICE.city}</span>
             </address>
-            <p className="mt-5 text-[17px] leading-[1.8] text-foreground">
+            <p className="mt-5 text-[17px] leading-[1.8] text-ink">
               In-person sessions in Santa Monica
               <br />
               Telehealth for clients located in California
@@ -51,7 +51,7 @@ export default function ContactPage() {
               href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-block border-b border-foreground pb-2 text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal"
+              className="mt-8 inline-block border-b border-primary pb-2 text-[11.5px] tracking-[0.12em] text-ink uppercase transition-colors duration-300 hover:border-accent-deep hover:text-accent-deep"
             >
               Get directions
             </a>

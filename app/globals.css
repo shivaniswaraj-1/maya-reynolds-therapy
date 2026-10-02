@@ -1,12 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  /* Exact values measured from the live site's computed styles. */
-  --background: #f6f4ee;
-  --foreground: #2b2b2b;
-  --ink: #000000;
-  --accent-teal: #86b3b3;
-  --accent-sand: #e3d9ca;
+  /*
+    Site theme — Dr. Maya Reynolds. Drawn from her Santa Monica office photos
+    (olive tree, exposed brick, warm wood) so imagery and UI feel like one space.
+    Contrast (WCAG): ink on canvas 12.5:1, primary on canvas 8.9:1, white on
+    primary 9.7:1, accent-deep on canvas 5.3:1. `accent` (3.9:1) is reserved
+    for large display text such as the script accent words.
+  */
+  --canvas: #f6f5ef; /* Linen — base page background */
+  --primary: #2f4a3e; /* Deep Eucalyptus — headings, buttons, dark bands */
+  --secondary: #dde4d6; /* Sage Mist — section backgrounds */
+  --accent: #b4664a; /* Terracotta Clay — script accents */
+  --accent-deep: #99533a; /* Clay for small text, links and hover states */
+  --accent-soft: #e6b39b; /* Clay tint for accents on dark (primary) bands */
+  --ink: #25302a; /* Body text */
+
+  /* Conejo Valley clone palette — used only by /conejo-clone (Part 1). */
+  --cv-cream: #f6f4ee;
+  --cv-ink: #2b2b2b;
+  --cv-black: #000000;
+  --cv-teal: #86b3b3;
+  --cv-sand: #e3d9ca;
 
   /*
     Fluid unit. The reference site scales type and spacing as
@@ -40,11 +55,19 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-canvas: var(--canvas);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
   --color-ink: var(--ink);
-  --color-accent-teal: var(--accent-teal);
-  --color-accent-sand: var(--accent-sand);
+
+  --color-cv-cream: var(--cv-cream);
+  --color-cv-ink: var(--cv-ink);
+  --color-cv-black: var(--cv-black);
+  --color-cv-teal: var(--cv-teal);
+  --color-cv-sand: var(--cv-sand);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-script: var(--font-script);
@@ -79,14 +102,19 @@
   --text-nav--letter-spacing: 0.1em;
 }
 
-/* Teal script accent word inside a heading ("thrive", "help", ...). */
+/*
+  Script accent word inside a heading ("at ease", "help", ...). Uses the site
+  accent; a section can override --script-color (the Conejo clone sets teal,
+  dark bands use the soft clay).
+*/
 @utility script {
   font-family: var(--font-script);
   font-size: 1.95em;
   font-weight: 400;
   line-height: 0;
   letter-spacing: 0;
-  color: var(--accent-teal);
+  color: var(--script-color, var(--accent));
+  white-space: nowrap;
 }
 
 /*
@@ -95,15 +123,15 @@
   a near-black band wherever the hero didn't fill the full viewport.
 */
 html {
-  background: var(--background);
+  background: var(--canvas);
   scroll-behavior: smooth;
   /* Keep in-page anchors from landing under the sticky header. */
   scroll-padding-top: 112px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--canvas);
+  color: var(--ink);
 }
 
 /*

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 import { TextLink } from "@/components/conejo/ui";
 
 /*
@@ -12,7 +12,7 @@ export default function HowWeWork() {
   return (
     <section
       id="about"
-      className={`${styles.grid24} grid bg-accent-sand px-gutter pt-(--how-pt) pb-(--how-pb) text-ink [grid-template-areas:'eb'_'h2'_'img'_'a'_'b'_'link'] md:grid-rows-[auto_auto_auto_1fr] md:px-0 md:[grid-template-areas:none]`}
+      className={`${styles.grid24} grid bg-cv-sand px-gutter pt-(--how-pt) pb-(--how-pb) text-cv-black [grid-template-areas:'eb'_'h2'_'img'_'a'_'b'_'link'] md:grid-rows-[auto_auto_auto_1fr] md:px-0 md:[grid-template-areas:none]`}
     >
       <p className="text-eyebrow font-normal uppercase [grid-area:eb] md:col-[3/15] md:row-[1]">
         How we work

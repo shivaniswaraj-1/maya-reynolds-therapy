@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 
 /* 768px+: photo from the left edge to column 13; headline in columns 15–24. */
 export default function HonoringSection() {

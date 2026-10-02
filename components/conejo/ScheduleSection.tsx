@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/components/conejo/conejo.module.css";
+import styles from "@/components/layout/site-grid.module.css";
 import { PillLink } from "@/components/conejo/ui";
 
 /*
@@ -13,7 +13,7 @@ export default function ScheduleSection() {
   return (
     <section
       id="contact"
-      className={`${styles.grid24} flex flex-col bg-background pt-(--sched-pt) pb-(--sched-pb) md:grid-rows-[auto_var(--sched-eb-h2)_1fr]`}
+      className={`${styles.grid24} flex flex-col bg-cv-cream pt-(--sched-pt) pb-(--sched-pb) md:grid-rows-[auto_var(--sched-eb-h2)_1fr]`}
     >
       <div className="relative aspect-[189/199] w-[48.5vw] md:col-[1/4] md:row-[3] md:aspect-auto md:w-auto">
         <Image
