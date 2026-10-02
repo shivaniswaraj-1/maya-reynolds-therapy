@@ -45,10 +45,10 @@ export default function Approach() {
         </div>
 
         <Link
-          href="/about"
+          href="/approach"
           className="mt-14 w-fit border-b border-foreground pb-2 text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal md:mt-auto md:pt-24"
         >
-          More about Dr. Reynolds
+          Explore my approach
         </Link>
       </Reveal>
 

@@ -21,7 +21,7 @@ export default function BurnoutWork() {
           therapist who understands the realities of a fast-paced environment.
         </p>
         <Link
-          href="/#contact"
+          href="/contact"
           className="mt-12 w-fit rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:bg-foreground hover:text-background md:mt-auto"
         >
           Schedule now

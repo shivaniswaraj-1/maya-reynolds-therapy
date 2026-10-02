@@ -1,52 +1,52 @@
 import Image from "next/image";
+import styles from "@/components/conejo/conejo.module.css";
 
+/*
+  768px+: headline (columns 2–14) over two text columns (2–8, 9–15) beside a
+  tall photo running from column 18 to the right edge; the text keeps a
+  measured gap from the top of the photo.
+  Mobile reorders to headline, first column, photo, second column (as on the
+  reference site).
+*/
 export default function HopeSection() {
   return (
-    <section className="relative mt-16 flex flex-col overflow-hidden bg-background md:mt-24 md:min-h-screen md:flex-row lg:mt-28">
-      {/* Text content */}
-      <div className="flex flex-1 flex-col justify-center px-8 py-16 md:px-16 md:py-20 lg:px-20 lg:py-24 lg:pr-16">
-        <h2 className="max-w-3xl font-serif text-[38px] font-light leading-[1.3] tracking-tight text-foreground sm:text-[44px] lg:max-w-[880px] lg:text-[50px]">
-          You&apos;re holding onto hope that life can be better than it is
-          right now.
-        </h2>
+    <section
+      className={`${styles.grid24} grid bg-background px-gutter pt-(--hope-pt) pb-(--hope-pb) [grid-template-areas:'h2'_'a'_'img'_'b'] md:grid-rows-[auto_1fr] md:gap-y-(--hope-h2-cols) md:px-0 md:[grid-template-areas:none]`}
+    >
+      <h2 className="font-serif text-h2 font-extralight [grid-area:h2] md:col-[3/16] md:row-[1] md:mt-(--hope-text-top)">
+        You’re holding onto hope that life can be better than it is right now.
+      </h2>
 
-        <div className="mt-12 grid gap-x-16 gap-y-8 md:mt-16 md:grid-cols-2 lg:mt-20">
-          <div className="flex flex-col gap-5">
-            <p className="text-[15px] tracking-[0.1em] text-foreground uppercase">
-              At Conejo Valley Family Counseling we want to make that hope a
-              reality.
-            </p>
-            <p className="text-[17px] leading-[1.8] text-foreground">
-              Whether you&apos;re an adult seeking personal growth,  looking
-              to work through your trauma, a couple working on your
-              relationship, or a parent looking for support for your child,
-              we provide a compassionate and safe space to help you navigate
-              all of life&apos;s ups and downs.
-            </p>
-          </div>
-
-          <p className="text-[17px] leading-[1.8] text-foreground">
-            First and foremost, we believe what you&apos;re going through is
-            real, valid, and worthy of support. Our team offers clients in
-            the Newbury Park area and across CA an environment to discover a
-            new life and a deeper sense of self in the midst of their
-            struggles. As we tap into the power of connection and
-            understanding, you can find your footing again and take a
-            transformative path forward.
-          </p>
-        </div>
+      <div className="mt-[11px] [grid-area:a] md:col-[3/10] md:row-[2] md:mt-0 md:mr-[6.4px] md:mb-(--hope-text-bottom) md:self-start">
+        <p className="text-eyebrow font-normal uppercase">
+          At Conejo Valley Family Counseling we want to make that hope a
+          reality.
+        </p>
+        <p className="mt-[15px] text-body font-light">
+          Whether you’re an adult seeking personal growth, looking to work
+          through your trauma, a couple working on your relationship, or a
+          parent looking for support for your child, we provide a compassionate
+          and safe space to help you navigate all of life’s ups and downs.
+        </p>
       </div>
 
-      {/* Right image - real site: top 12.5%, bottom 16.9%, height ~70.6% of section */}
-      <div className="relative h-[380px] w-full md:h-auto md:w-[30.5%] md:self-stretch">
-        <div className="absolute inset-0 md:top-[12.5%] md:bottom-[16.9%]">
-          <Image
-            src="/hope-ocean.jpg"
-            alt="Sandy beach with gentle ocean waves and a cloudy sky"
-            fill
-            className="object-cover"
-          />
-        </div>
+      <p className="mt-[46px] text-body font-light [grid-area:b] md:col-[10/17] md:row-[2] md:mt-0 md:mr-[6.4px] md:mb-(--hope-text-bottom) md:self-start">
+        First and foremost, we believe what you’re going through is real,
+        valid, and worthy of support. Our team offers clients in the Newbury
+        Park area and across CA an environment to discover a new life and a
+        deeper sense of self in the midst of their struggles. As we tap into
+        the power of connection and understanding, you can find your footing
+        again and take a transformative path forward.
+      </p>
+
+      <div className="relative mt-[45px] aspect-[343/234] [grid-area:img] md:col-[19/27] md:row-[1/3] md:mt-0 md:ml-[5.7px] md:aspect-auto md:min-h-(--hope-img-min)">
+        <Image
+          src="/hope-ocean.jpg"
+          alt="Sandy beach with gentle ocean waves under a cloudy sky"
+          fill
+          sizes="(min-width: 768px) 31vw, 88vw"
+          className="object-cover"
+        />
       </div>
     </section>
   );

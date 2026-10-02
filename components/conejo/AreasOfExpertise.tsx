@@ -1,3 +1,6 @@
+import styles from "@/components/conejo/conejo.module.css";
+
+// Listed row by row (left, right) as on desktop.
 const AREAS = [
   "Dissociation",
   "Anxiety",
@@ -10,32 +13,53 @@ const AREAS = [
   "Depression",
   "Intimacy & Connection",
   "Marriage",
-  "...and more.",
+  "…and more.",
 ];
 
+// Mobile shows the left column first, then the right column.
+const MOBILE_ORDER = [
+  "order-1", "order-7", "order-2", "order-8", "order-3", "order-9",
+  "order-4", "order-10", "order-5", "order-11", "order-6", "order-12",
+];
+
+// 768px+ grid row for each pair of items.
+const ROWS = ["md:row-[1]", "md:row-[2]", "md:row-[3]", "md:row-[4]", "md:row-[5]", "md:row-[6]"];
+
+/* 768px+: heading in columns 2–7; items in columns 9–15 and 17–23. */
 export default function AreasOfExpertise() {
   return (
-    <section className="bg-white px-8 py-20 md:px-16 md:py-28 lg:px-20 lg:py-36">
-      <div className="mx-auto grid max-w-[1580px] gap-12 lg:grid-cols-[30%_1fr] lg:gap-0">
-        <h2 className="font-serif text-[40px] font-light leading-[1.1] tracking-tight text-foreground sm:text-[46px]">
-          Our areas of
-          <span className="-mt-1 block -translate-x-1 font-script text-[60px] leading-[1.2] text-accent-teal sm:text-[70px]">
-            expertise
-          </span>
-        </h2>
+    <section
+      className={`${styles.grid24} bg-white px-gutter pt-(--areas-pt) pb-(--areas-pb) md:min-h-[80vh] md:content-center md:px-0`}
+    >
+      <h2 className="font-serif text-h3 font-extralight md:col-[3/9] md:row-[1/7] md:self-start">
+        Our areas of <span className="script">expertise</span>
+      </h2>
 
-        <ul className="grid grid-cols-1 gap-x-20 sm:grid-cols-2">
-          {AREAS.map((area) => (
-            // Every row but the last gets a divider.
+      <ul className="mt-[55px] flex flex-col md:contents">
+        {AREAS.map((area, i) => {
+          const firstRow = i < 2;
+          const lastRow = i >= AREAS.length - 2;
+          return (
             <li
               key={area}
-              className="border-b border-foreground/10 py-7 text-[15px] tracking-[0.15em] text-foreground uppercase first:pt-0 last:border-b-0 sm:py-10 sm:[&:nth-child(-n+2)]:pt-0 sm:[&:nth-last-child(-n+2)]:border-b-0"
+              className={[
+                "text-eyebrow font-normal uppercase md:order-none",
+                MOBILE_ORDER[i],
+                ROWS[Math.floor(i / 2)],
+                i % 2 === 0 ? "md:col-[10/17]" : "md:col-[18/25]",
+                // Divider below every item but the last (mobile) / last row (desktop).
+                "border-accent-sand/50",
+                i === 0 ? "" : "pt-(--areas-rule-next)",
+                i === AREAS.length - 1 ? "" : "border-b pb-(--areas-text-rule)",
+                firstRow ? "md:pt-0" : "",
+                lastRow ? "md:border-b-0 md:pb-0" : "",
+              ].join(" ")}
             >
               {area}
             </li>
-          ))}
-        </ul>
-      </div>
+          );
+        })}
+      </ul>
     </section>
   );
 }

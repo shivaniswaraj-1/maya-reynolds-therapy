@@ -21,7 +21,7 @@ export default function BioCta() {
           California.
         </p>
         <Link
-          href="/#contact"
+          href="/contact"
           className="mt-10 w-fit rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:bg-foreground hover:text-background"
         >
           Get in touch

@@ -39,7 +39,7 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-6 md:mt-10">
           <Link
-            href="/#contact"
+            href="/contact"
             className="rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:bg-foreground hover:text-background"
           >
             Book a consultation

@@ -6,7 +6,6 @@ import BioIntro from "@/components/bio/BioIntro";
 import BioBanner from "@/components/bio/BioBanner";
 import TraumaWork from "@/components/bio/TraumaWork";
 import BurnoutWork from "@/components/bio/BurnoutWork";
-import BioValues from "@/components/bio/BioValues";
 import Sessions from "@/components/bio/Sessions";
 import BioCta from "@/components/bio/BioCta";
 
@@ -19,15 +18,15 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="flex flex-col bg-background">
-      <div className="flex min-h-screen flex-1 flex-col">
-        <Navbar />
+      <Navbar />
+      {/* Hero fills the rest of the first screen below the sticky header */}
+      <div className="flex min-h-[calc(100svh-96px)] flex-1 flex-col lg:min-h-[calc(100svh-112px)]">
         <BioHero />
       </div>
       <BioIntro />
       <BioBanner />
       <TraumaWork />
       <BurnoutWork />
-      <BioValues />
       <Sessions />
       <BioCta />
       <Footer />

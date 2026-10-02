@@ -2,21 +2,22 @@ import Image from "next/image";
 
 export default function StorySection() {
   return (
-    <section className="relative mt-16 h-[520px] w-full overflow-hidden bg-foreground md:mt-24 md:h-[650px] lg:mt-28 lg:h-[724px]">
+    <section className="relative flex min-h-[66vh] items-center overflow-hidden bg-foreground px-gutter pt-(--story-pt) pb-(--story-pb) md:items-end md:pl-[calc(8.75vw_+_0.5px)]">
       <Image
         src="/story-banner.png"
         alt="Two children running along a foggy beach"
         fill
+        sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-foreground/25" />
-      <div className="absolute inset-0 flex items-end">
-        <p className="max-w-3xl px-8 pb-14 font-serif text-[26px] font-light leading-[1.3] tracking-tight text-background sm:text-[30px] md:px-16 md:pb-20 lg:px-20 lg:text-[34px]">
-          You deserve a place where your story is heard, valued, and
-          understood. <em className="italic">Nothing will be too heavy for
-          us to carry together.</em>
-        </p>
-      </div>
+      {/* Same overlay as the reference: #2b2b2b at 54% */}
+      <div className="absolute inset-0 bg-foreground/54" />
+
+      {/* 768px+: spans 16 grid columns */}
+      <h2 className="relative font-serif text-h2 font-extralight text-white md:max-w-[calc(60vw_-_3.8px)]">
+        You deserve a place where your story is heard, valued, and understood.{" "}
+        <em>Nothing will be too heavy for us to carry together.</em>
+      </h2>
     </section>
   );
 }

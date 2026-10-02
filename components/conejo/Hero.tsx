@@ -1,56 +1,55 @@
 import Image from "next/image";
-import Link from "next/link";
+import styles from "@/components/conejo/conejo.module.css";
+import { TextLink } from "@/components/conejo/ui";
 
+/*
+  768px+: on the 24-column grid — photo from the left edge to column 8, copy in
+  columns 11–22, photo sliver from column 24 to the right edge. The eyebrow
+  sits at the top; the headline group sits at the bottom, level with the photo.
+  Mobile: copy first, then the photo with the sliver at the right edge.
+*/
 export default function Hero() {
   return (
-    <section className="relative flex flex-1 flex-col overflow-hidden bg-background md:min-h-[560px] md:flex-row">
-      {/* Left image - real site: top 5.6%, bottom 11.2% (measured below the header) */}
-      <div className="relative h-[420px] w-full md:h-auto md:w-[34.6%] md:self-stretch">
-        <div className="absolute inset-0 md:top-[5.6%] md:bottom-[11.2%]">
-          <Image
-            src="/hero-family.jpg"
-            alt="Family walking together on the beach"
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
+    <section
+      className={`${styles.grid24} grid grid-cols-[71.3vw_1fr] bg-background pt-[calc(var(--header-h)_+_var(--hero-offset))] pb-(--hero-pb) md:grid-rows-[auto_minmax(calc(60px_+_3.8*var(--u)),1fr)_auto]`}
+    >
+      <div className="relative order-3 mt-[59px] aspect-[278/304] md:order-none md:col-[1/10] md:row-[1/4] md:mt-0 md:aspect-auto md:min-h-(--hero-img-min)">
+        <Image
+          src="/hero-family.jpg"
+          alt="Family walking together on the beach"
+          fill
+          priority
+          sizes="(min-width: 768px) 35vw, 72vw"
+          className="object-cover"
+        />
       </div>
 
-      {/* Text content */}
-      <div className="flex flex-1 flex-col justify-center px-8 py-14 md:px-16 md:py-16 lg:px-20 lg:pr-28">
-        <p className="max-w-md text-[15px] tracking-[0.15em] text-foreground uppercase">
-          Online &amp; in-person counseling in Newbury Park &amp; across CA
-        </p>
+      <p className="order-1 col-span-2 px-gutter text-eyebrow font-normal uppercase md:order-none md:col-[12/20] md:row-[1] md:mt-(--hero-eyebrow-top) md:px-0">
+        Online &amp; in-person counseling in Newbury Park &amp; across CA
+      </p>
 
-        <h1 className="mt-10 max-w-2xl font-serif text-[44px] font-light leading-[1.25] tracking-tight text-foreground sm:mt-14 sm:text-[52px] lg:mt-16 lg:max-w-[700px] lg:text-[58px]">
+      <div className="order-2 col-span-2 mt-[31px] px-gutter md:order-none md:col-[12/24] md:row-[3] md:mt-0 md:px-0 md:pb-(--hero-link-bottom)">
+        <h1 className="font-serif text-h1 font-extralight">
           Rebuild your foundation on solid ground and finally begin to{" "}
-          <span className="font-script text-[57px] leading-none text-accent-teal sm:text-[67px] lg:text-[75px]">
-            thrive
-          </span>
-          .
+          <span className="script">thrive</span>.
         </h1>
-
-        <p className="mt-6 max-w-md text-[17px] leading-[1.8] text-foreground md:mt-8">
+        <p className="mt-[30px] text-body font-light">
           Specialized therapy for adults, couples, teens, and children to
           reflect, heal, and grow.
         </p>
-
-        <Link
-          href="/#contact"
-          className="mt-8 w-fit border-b border-foreground pb-1 text-[11.5px] tracking-[0.12em] text-foreground uppercase md:mt-10"
-        >
-          Book an Appointment
-        </Link>
+        <TextLink href="#contact" className="mt-(--hero-p-link)">
+          Book an appointment
+        </TextLink>
       </div>
 
-      {/* Right edge image sliver - real site: top 33.8%, height 55% (measured below the header) */}
-      <div className="absolute right-0 hidden w-[8.2%] lg:block lg:top-[33.8%] lg:h-[55%]">
+      {/* Photo sliver at the right edge */}
+      <div className="relative order-4 mt-[59px] aspect-[57/199] w-[14.6vw] self-end justify-self-end md:order-none md:col-[25/27] md:row-[3] md:-mt-(--hero-sliver-rise) md:aspect-auto md:w-auto md:self-stretch md:justify-self-stretch">
         <Image
           src="/hero-edge.jpg"
           alt=""
           aria-hidden="true"
           fill
+          sizes="(min-width: 768px) 9vw, 15vw"
           className="object-cover"
         />
       </div>

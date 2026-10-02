@@ -1,16 +1,39 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
 import { NAV_LINKS } from "@/lib/site";
 
+// Underline that grows from the left on hover and stays drawn while active.
+const underline =
+  "relative after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-current after:transition-transform after:duration-500 after:ease-out after:content-['']";
+
 export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const close = () => setOpen(false);
 
+  // Soft shadow once the page scrolls under the sticky header.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+
+  const contactActive = pathname === "/contact";
+
   return (
-    <header className="relative z-30 bg-background">
+    <header
+      className={`sticky top-0 z-40 bg-background transition-shadow duration-500 ${
+        scrolled ? "shadow-[0_8px_24px_-18px_rgba(0,0,0,0.35)]" : ""
+      }`}
+    >
       <div className="mx-auto flex max-w-[1680px] items-center justify-between px-6 py-[27px] sm:px-10 md:px-16 lg:px-20">
         <Link href="/" className="shrink-0" onClick={close} aria-label="Dr. Maya Reynolds, PsyD — home">
           <Logo />
@@ -18,18 +41,29 @@ export default function Navbar() {
 
         {/* Nav links + Contact */}
         <nav className="hidden items-center gap-8 md:flex lg:gap-10">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-[13px] tracking-[0.1em] text-foreground uppercase transition-colors duration-300 hover:text-accent-teal"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const active = isActive(link.href);
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={`${underline} text-[13px] tracking-[0.1em] text-foreground uppercase ${
+                  active ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link
-            href="/#contact"
-            className="rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:bg-foreground hover:text-background"
+            href="/contact"
+            aria-current={contactActive ? "page" : undefined}
+            className={`rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] uppercase transition-colors duration-300 ${
+              contactActive
+                ? "bg-foreground text-background"
+                : "text-foreground hover:bg-foreground hover:text-background"
+            }`}
           >
             Contact
           </Link>
@@ -65,21 +99,30 @@ export default function Navbar() {
         }`}
       >
         <nav className="overflow-hidden" inert={!open}>
-          <div className="flex flex-col gap-6 px-6 pt-2 pb-10 sm:px-10">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={close}
-                className="text-[14px] tracking-[0.12em] text-foreground uppercase"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="flex flex-col items-start gap-6 px-6 pt-2 pb-10 sm:px-10">
+            {NAV_LINKS.map((link) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={close}
+                  aria-current={active ? "page" : undefined}
+                  className={`${underline} text-[14px] tracking-[0.12em] text-foreground uppercase ${
+                    active ? "after:scale-x-100" : "after:scale-x-0"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
-              href="/#contact"
+              href="/contact"
               onClick={close}
-              className="mt-2 w-fit rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase"
+              aria-current={contactActive ? "page" : undefined}
+              className={`mt-2 w-fit rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] uppercase ${
+                contactActive ? "bg-foreground text-background" : "text-foreground"
+              }`}
             >
               Contact
             </Link>

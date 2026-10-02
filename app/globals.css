@@ -4,18 +4,89 @@
   /* Exact values measured from the live site's computed styles. */
   --background: #f6f4ee;
   --foreground: #2b2b2b;
+  --ink: #000000;
   --accent-teal: #86b3b3;
   --accent-sand: #e3d9ca;
+
+  /*
+    Fluid unit. The reference site scales type and spacing as
+    `15px + k * min(1vw, 18px)`: everything grows with the viewport and stops
+    growing at 1800px. Below the 768px mobile breakpoint it switches to a
+    phone scale that tops out at a 390px-wide screen.
+  */
+  --u: min(1vw, 18px);
+
+  /* Page gutters: content edge and the wider "edge" used by the header/logos. */
+  --gutter: 8.82vw;
+  --edge: 5vw;
+
+  /* Small caps-style labels shrink slightly as the screen widens. */
+  --button-size: min(12.75px, calc(15.756px - 0.2325 * var(--u)));
+  --nav-size: min(13.5px, calc(15.55px - 0.155 * var(--u)));
+}
+
+@media (max-width: 767px) {
+  :root {
+    --u: calc((min(100vw, 390px) - 120px) / 30);
+    --gutter: 6vw;
+    --edge: 6vw;
+    --button-size: 13.38px;
+  }
+}
+
+@theme {
+  /* Desktop navigation appears from 800px, matching the reference site. */
+  --breakpoint-nav: 800px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
   --color-accent-teal: var(--accent-teal);
   --color-accent-sand: var(--accent-sand);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-script: var(--font-script);
+
+  --spacing-gutter: var(--gutter);
+  --spacing-edge: var(--edge);
+
+  /* Type scale (font-size / line-height / letter-spacing), from the live site. */
+  --text-h1: calc(15px + 3.12 * var(--u));
+  --text-h1--line-height: 1.2544;
+  --text-h1--letter-spacing: 0.01em;
+  --text-h2: calc(15px + 2.28 * var(--u));
+  --text-h2--line-height: 1.2936;
+  --text-h2--letter-spacing: 0.01em;
+  --text-h3: calc(15px + 1.68 * var(--u));
+  --text-h3--line-height: 1.3216;
+  --text-h3--letter-spacing: 0.01em;
+  --text-h4: calc(15px + 0.84 * var(--u));
+  --text-h4--line-height: 1.3608;
+  --text-h4--letter-spacing: 0.01em;
+  --text-body: calc(15px + 0.12 * var(--u));
+  --text-body--line-height: 1.8;
+  --text-small: calc(0.9 * (15px + 0.12 * var(--u)));
+  --text-small--line-height: 1.8;
+  --text-eyebrow: 15px;
+  --text-eyebrow--line-height: 1.8;
+  --text-eyebrow--letter-spacing: 0.12em;
+  --text-button: var(--button-size);
+  --text-button--letter-spacing: 0.12em;
+  --text-nav: var(--nav-size);
+  --text-nav--line-height: 1.8;
+  --text-nav--letter-spacing: 0.1em;
+}
+
+/* Teal script accent word inside a heading ("thrive", "help", ...). */
+@utility script {
+  font-family: var(--font-script);
+  font-size: 1.95em;
+  font-weight: 400;
+  line-height: 0;
+  letter-spacing: 0;
+  color: var(--accent-teal);
 }
 
 /*
@@ -26,6 +97,8 @@
 html {
   background: var(--background);
   scroll-behavior: smooth;
+  /* Keep in-page anchors from landing under the sticky header. */
+  scroll-padding-top: 112px;
 }
 
 body {

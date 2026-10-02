@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 const PHOTOS = [
@@ -39,6 +40,12 @@ export default function Office() {
             often share that the space itself helps them feel more at ease when
             they arrive.
           </p>
+          <Link
+            href="/office"
+            className="mt-8 inline-block border-b border-foreground pb-2 text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal"
+          >
+            See the office
+          </Link>
         </Reveal>
       </div>
 

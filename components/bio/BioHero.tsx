@@ -27,7 +27,7 @@ export default function BioHero() {
         </div>
 
         <Link
-          href="/#contact"
+          href="/contact"
           className="mt-10 w-fit border-b border-foreground pb-2 text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal md:mt-0"
         >
           Book a consultation

@@ -13,7 +13,7 @@ export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encod
 
 export const NAV_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Specialties", href: "/#specialties" },
-  { label: "Approach", href: "/#approach" },
-  { label: "Office", href: "/#office" },
+  { label: "Specialties", href: "/specialties" },
+  { label: "Approach", href: "/approach" },
+  { label: "Office", href: "/office" },
 ];

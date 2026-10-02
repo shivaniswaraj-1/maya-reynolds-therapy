@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { MAPS_URL, PRACTICE } from "@/lib/site";
 
@@ -47,14 +48,22 @@ export default function Contact() {
               located in California.
             </p>
           </div>
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:bg-foreground hover:text-background"
-          >
-            Get directions
-          </a>
+          <div className="flex flex-wrap items-center gap-x-10 gap-y-6">
+            <Link
+              href="/contact"
+              className="rounded-full border border-foreground bg-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-background uppercase transition-colors duration-300 hover:bg-transparent hover:text-foreground"
+            >
+              Send a message
+            </Link>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-b border-foreground pb-1 text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal"
+            >
+              Get directions
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>

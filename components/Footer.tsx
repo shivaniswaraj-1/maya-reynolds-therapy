@@ -6,10 +6,15 @@ import { MAPS_URL, NAV_LINKS, PRACTICE } from "@/lib/site";
 const FOOTER_LINKS = [
   { label: "Home", href: "/" },
   ...NAV_LINKS,
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
-const SPECIALTIES = ["Anxiety & Panic", "Trauma", "Burnout", "Perfectionism"];
+const SPECIALTIES = [
+  { label: "Anxiety & Panic", href: "/specialties#anxiety" },
+  { label: "Trauma", href: "/specialties#trauma" },
+  { label: "Burnout & Perfectionism", href: "/specialties#burnout" },
+  { label: "Past Experiences", href: "/specialties#past-experiences" },
+];
 
 function ColumnHeading({ children }: { children: ReactNode }) {
   return (
@@ -51,9 +56,9 @@ export default function Footer() {
           <ColumnHeading>Specialties</ColumnHeading>
           <ul className="mt-5 flex flex-col gap-1 text-[16px] leading-[1.7] text-foreground">
             {SPECIALTIES.map((item) => (
-              <li key={item}>
-                <Link href="/#specialties" className="transition-colors duration-300 hover:text-accent-teal">
-                  {item}
+              <li key={item.label}>
+                <Link href={item.href} className="transition-colors duration-300 hover:text-accent-teal">
+                  {item.label}
                 </Link>
               </li>
             ))}

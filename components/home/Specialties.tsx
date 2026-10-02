@@ -3,21 +3,25 @@ import Reveal from "@/components/Reveal";
 
 const SPECIALTIES = [
   {
+    id: "anxiety",
     title: "Anxiety & Panic",
     description:
       "Constant worry, overthinking, a tense body, trouble sleeping, or the feeling that you’re always bracing for something to go wrong. Together we’ll make sense of what’s driving it and build practical tools to help you feel calmer and more in control.",
   },
   {
+    id: "trauma",
     title: "Trauma",
     description:
       "I work with single-incident trauma as well as more complex, long-standing patterns that may stem from childhood, relationships, or chronic stress. The work is paced carefully, with an emphasis on safety, stabilization, and feeling more regulated in daily life.",
   },
   {
+    id: "burnout",
     title: "Burnout & Perfectionism",
     description:
       "For entrepreneurs, creatives, and professionals living with high internal pressure who feel disconnected from themselves after years of pushing through stress. Therapy becomes a place to slow down and build more sustainable ways of living and working.",
   },
   {
+    id: "past-experiences",
     title: "Past Experiences",
     description:
       "Earlier life experiences can keep shaping your relationships, confidence, or sense of safety long after they’ve passed. We’ll explore those patterns with care so you can develop insight, resilience, and a stronger relationship with yourself.",
@@ -52,7 +56,7 @@ export default function Specialties() {
                 {item.description}
               </p>
               <Link
-                href="/about"
+                href={`/specialties#${item.id}`}
                 className="mt-10 w-fit border-b border-foreground pb-2 text-[11.5px] tracking-[0.12em] text-foreground uppercase transition-colors duration-300 hover:border-accent-teal hover:text-accent-teal md:mt-16"
               >
                 Learn more

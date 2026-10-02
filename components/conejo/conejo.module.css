@@ -1,0 +1,232 @@
+/*
+  Spacing measured on the live conejovalleycounseling.com homepage (Chrome,
+  900px-tall viewport) at 390, 768, 1024, 1440 and 1905px wide. Between the
+  measured widths each value scales linearly with the fluid unit --u, so the
+  clone tracks the original at every size. Generated from the measurement
+  table; edit the table rather than these numbers by hand.
+*/
+.page {
+  /* Header height: logo + vertical padding (mobile/tablet header vs. desktop). */
+  --header-h: calc(70px + 12vw);
+  --hero-offset: 55px;
+  --hero-img-min: 0px;
+  --hero-eyebrow-top: 0px;
+  --hero-sliver-rise: 0px;
+  --hero-p-link: 23px;
+  --hero-link-bottom: 0px;
+  --hero-pb: 35px;
+  --hope-pt: 63px;
+  --hope-text-top: 0px;
+  --hope-text-bottom: 0px;
+  --hope-h2-cols: 0px;
+  --hope-img-min: 0px;
+  --hope-pb: 64px;
+  --who-pt: 66px;
+  --who-h2-img: 52px;
+  --who-img-h: 0px;
+  --who-img-h4: 46px;
+  --who-pb: 59px;
+  --story-pt: 159px;
+  --story-pb: 159px;
+  --areas-pt: 82px;
+  --areas-pb: 104px;
+  --areas-text-rule: 20px;
+  --areas-rule-next: 22px;
+  --how-pt: 86px;
+  --how-pb: 83px;
+  --how-eb-h2: 28px;
+  --how-h2-cols: 0px;
+  --how-img-min: 0px;
+  --honor-pt: 70px;
+  --honor-pb: 71px;
+  --spec-pt: 70px;
+  --spec-h4-offset: 0px;
+  --spec-p-link: 24px;
+  --spec-row-gap: 58px;
+  --spec-pb: 48px;
+  --sched-pt: 59px;
+  --sched-pb: 59px;
+  --sched-eb-h2: 27px;
+  --sched-h2-p: 13px;
+  --sched-btn-bottom: 0px;
+  --sched-p2-btn: 16px;
+  --footer-pt: 75px;
+  --footer-logo-p: 11px;
+  --footer-pb: 46px;
+  --footer-bar: 0px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    --header-h: calc(75px + 12vw);
+    --hero-offset: calc(14px + 1.562 * var(--u));
+    --hero-img-min: calc(-1533px + 199.609 * var(--u));
+    --hero-eyebrow-top: 0px;
+    --hero-sliver-rise: 0px;
+    --hero-p-link: calc(3px + 1.562 * var(--u));
+    --hero-link-bottom: calc(-12px + 1.953 * var(--u));
+    --hero-pb: calc(22px + 3.906 * var(--u));
+    --hope-pt: calc(36px + 3.516 * var(--u));
+    --hope-text-top: calc(32px + 5.859 * var(--u));
+    --hope-text-bottom: calc(11px + 1.953 * var(--u));
+    --hope-h2-cols: calc(22px + 1.953 * var(--u));
+    --hope-img-min: 0px;
+    --hope-pb: calc(50px + 5.078 * var(--u));
+    --who-pt: calc(32px + 3.516 * var(--u));
+    --who-h2-img: calc(22px + 1.953 * var(--u));
+    --who-img-h: calc(108px + 21.484 * var(--u));
+    --who-img-h4: calc(26px + 1.562 * var(--u));
+    --who-pb: calc(29px + 3.906 * var(--u));
+    --story-pt: calc(169px + 12.5 * var(--u));
+    --story-pb: calc(200px - 5.078 * var(--u));
+    --areas-pt: calc(231px - 5.078 * var(--u));
+    --areas-pb: calc(211px - 0.781 * var(--u));
+    --areas-text-rule: calc(-18px + 3.516 * var(--u));
+    --areas-rule-next: calc(26px - 0.781 * var(--u));
+    --how-pt: calc(36px + 5.469 * var(--u));
+    --how-pb: calc(36px + 5.469 * var(--u));
+    --how-eb-h2: calc(13px + 8.203 * var(--u));
+    --how-h2-cols: calc(22px + 1.953 * var(--u));
+    --how-img-min: 0px;
+    --honor-pt: calc(175px - 8.594 * var(--u));
+    --honor-pb: calc(179px - 8.984 * var(--u));
+    --spec-pt: calc(-20px + 9.375 * var(--u));
+    --spec-h4-offset: calc(69px - 5.078 * var(--u));
+    --spec-p-link: 11px;
+    --spec-row-gap: calc(9px + 7.812 * var(--u));
+    --spec-pb: calc(-2px + 7.812 * var(--u));
+    --sched-pt: calc(36px + 3.125 * var(--u));
+    --sched-pb: calc(42px + 5.469 * var(--u));
+    --sched-eb-h2: calc(5px + 5.859 * var(--u));
+    --sched-h2-p: calc(-31px + 5.469 * var(--u));
+    --sched-btn-bottom: calc(-2px + 0.391 * var(--u));
+    --sched-p2-btn: calc(8px + 0.391 * var(--u));
+    --footer-pt: calc(26px + 1.953 * var(--u));
+    --footer-logo-p: calc(2px + 2.344 * var(--u));
+    --footer-pb: calc(20px + 2.734 * var(--u));
+    --footer-bar: 45px;
+  }
+}
+
+/* Desktop header (from the 800px nav breakpoint) is shorter. */
+@media (min-width: 800px) {
+  .page {
+    --header-h: calc(75px + 2.8vw);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    --hero-offset: calc(7.8px + 2.163 * var(--u));
+    --hero-img-min: calc(360.8px + 14.663 * var(--u));
+    --hero-eyebrow-top: calc(-17.2px + 1.683 * var(--u));
+    --hero-sliver-rise: calc(-19.7px + 1.923 * var(--u));
+    --hero-p-link: calc(-20.4px + 3.846 * var(--u));
+    --hero-link-bottom: calc(-14.2px + 2.163 * var(--u));
+    --hero-pb: calc(22.6px + 3.846 * var(--u));
+    --hope-pt: calc(0.6px + 6.971 * var(--u));
+    --hope-text-top: calc(8.3px + 8.173 * var(--u));
+    --hope-text-bottom: calc(11.3px + 1.923 * var(--u));
+    --hope-h2-cols: calc(-2.3px + 4.327 * var(--u));
+    --hope-img-min: calc(-1476.9px + 144.231 * var(--u));
+    --hope-pb: calc(8.5px + 9.135 * var(--u));
+    --who-pt: calc(-3.4px + 6.971 * var(--u));
+    --who-h2-img: calc(17.4px + 2.404 * var(--u));
+    --who-img-h: calc(111.4px + 21.154 * var(--u));
+    --who-img-h4: calc(19.8px + 2.163 * var(--u));
+    --who-pb: calc(5px + 6.25 * var(--u));
+    --story-pt: calc(289.6px + 0.721 * var(--u));
+    --story-pb: calc(246.5px - 9.615 * var(--u));
+    --areas-pt: calc(294.7px - 11.298 * var(--u));
+    --areas-pb: calc(279.3px - 7.452 * var(--u));
+    --areas-text-rule: calc(-6.6px + 2.404 * var(--u));
+    --areas-rule-next: calc(8.2px + 0.962 * var(--u));
+    --how-pt: calc(30.5px + 6.01 * var(--u));
+    --how-pb: calc(30.5px + 6.01 * var(--u));
+    --how-eb-h2: calc(13.3px + 8.173 * var(--u));
+    --how-h2-cols: calc(17.4px + 2.404 * var(--u));
+    --how-img-min: calc(-1693.5px + 165.385 * var(--u));
+    --honor-pt: calc(67.3px + 1.923 * var(--u));
+    --honor-pb: calc(67.3px + 1.923 * var(--u));
+    --spec-pt: calc(21.8px + 5.288 * var(--u));
+    --spec-h4-offset: calc(14.5px + 0.24 * var(--u));
+    --spec-p-link: calc(-21px + 3.125 * var(--u));
+    --spec-row-gap: calc(5.3px + 8.173 * var(--u));
+    --spec-pb: calc(-3.2px + 7.933 * var(--u));
+    --sched-pt: calc(1.5px + 6.49 * var(--u));
+    --sched-pb: calc(9.4px + 8.654 * var(--u));
+    --sched-eb-h2: calc(3.5px + 6.01 * var(--u));
+    --sched-h2-p: calc(10.2px + 1.442 * var(--u));
+    --sched-btn-bottom: calc(-17.7px + 1.923 * var(--u));
+    --sched-p2-btn: calc(-10.2px + 2.163 * var(--u));
+    --footer-pt: calc(-0.8px + 4.567 * var(--u));
+    --footer-logo-p: calc(70.3px - 4.327 * var(--u));
+    --footer-pb: calc(-153.8px + 19.712 * var(--u));
+    --footer-bar: 45px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    --hero-offset: calc(3px + 2.5 * var(--u));
+    --hero-img-min: calc(32px + 37.5 * var(--u));
+    --hero-eyebrow-top: calc(-29px + 2.5 * var(--u));
+    --hero-sliver-rise: calc(-48px + 3.889 * var(--u));
+    --hero-p-link: calc(-57px + 6.389 * var(--u));
+    --hero-link-bottom: calc(-19px + 2.5 * var(--u));
+    --hero-pb: calc(6px + 5 * var(--u));
+    --hope-pt: calc(-27px + 8.889 * var(--u));
+    --hope-text-top: calc(-14px + 9.722 * var(--u));
+    --hope-text-bottom: calc(-1px + 2.778 * var(--u));
+    --hope-h2-cols: calc(-8px + 4.722 * var(--u));
+    --hope-img-min: calc(-20px + 43.056 * var(--u));
+    --hope-pb: calc(-24px + 11.389 * var(--u));
+    --who-pt: calc(-43px + 9.722 * var(--u));
+    --who-h2-img: calc(4px + 3.333 * var(--u));
+    --who-img-h: calc(20px + 27.5 * var(--u));
+    --who-img-h4: calc(15px + 2.5 * var(--u));
+    --who-pb: calc(-353px + 31.111 * var(--u));
+    --story-pt: calc(0px + 20.833 * var(--u));
+    --story-pb: calc(36px + 5 * var(--u));
+    --areas-pt: calc(52px + 5.556 * var(--u));
+    --areas-pb: calc(20px + 10.556 * var(--u));
+    --areas-text-rule: calc(-16px + 3.056 * var(--u));
+    --areas-rule-next: calc(-6px + 1.944 * var(--u));
+    --how-pt: calc(13px + 7.222 * var(--u));
+    --how-pb: calc(9px + 7.5 * var(--u));
+    --how-eb-h2: calc(-29px + 11.111 * var(--u));
+    --how-h2-cols: calc(4px + 3.333 * var(--u));
+    --how-img-min: calc(40px + 45 * var(--u));
+    --honor-pt: calc(-29px + 8.611 * var(--u));
+    --honor-pb: calc(-29px + 8.611 * var(--u));
+    --spec-pt: calc(-14px + 7.778 * var(--u));
+    --spec-h4-offset: calc(22px - 0.278 * var(--u));
+    --spec-p-link: calc(-320px + 23.889 * var(--u));
+    --spec-row-gap: calc(-21px + 10 * var(--u));
+    --spec-pb: calc(-33px + 10 * var(--u));
+    --sched-pt: calc(-29px + 8.611 * var(--u));
+    --sched-pb: calc(-22px + 10.833 * var(--u));
+    --sched-eb-h2: calc(-18px + 7.5 * var(--u));
+    --sched-h2-p: calc(-29px + 4.167 * var(--u));
+    --sched-btn-bottom: calc(-26px + 2.5 * var(--u));
+    --sched-p2-btn: 21px;
+    --footer-pt: calc(-19px + 5.833 * var(--u));
+    --footer-logo-p: calc(40px - 2.222 * var(--u));
+    --footer-pb: calc(-302px + 30 * var(--u));
+    --footer-bar: calc(1px + 3.056 * var(--u));
+  }
+}
+
+/*
+  The reference site's fluid grid (768px and up): 24 equal columns across the
+  middle 90vw with 11.5px gaps, plus an edge track on each side so photos can
+  run to the viewport edge. Grid lines: 1 = left viewport edge, 2..25 = start
+  of columns 1..24, 26 = end of column 24, 27 = right viewport edge.
+*/
+@media (min-width: 768px) {
+  .grid24 {
+    display: grid;
+    grid-template-columns: calc(5vw - 11.5px) repeat(24, minmax(0, 1fr)) calc(5vw - 11.5px);
+    column-gap: 11.5px;
+  }
+}

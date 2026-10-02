@@ -1,66 +1,63 @@
 import Image from "next/image";
-import Link from "next/link";
+import styles from "@/components/conejo/conejo.module.css";
+import { PillLink } from "@/components/conejo/ui";
 
+/*
+  768px+: photo sliver from the left edge to column 2, copy in columns 5–14,
+  photo from column 17 to the right edge. The eyebrow lines up with the top of
+  the right photo; the headline lines up with the top of the sliver, and both
+  photos share the same bottom edge.
+  Mobile: sliver, copy, then the right photo.
+*/
 export default function ScheduleSection() {
   return (
     <section
       id="contact"
-      className="relative flex scroll-mt-6 flex-col overflow-hidden bg-background md:flex-row"
+      className={`${styles.grid24} flex flex-col bg-background pt-(--sched-pt) pb-(--sched-pb) md:grid-rows-[auto_var(--sched-eb-h2)_1fr]`}
     >
-      {/* Left edge image sliver - inset from the top, flush with the section bottom margin */}
-      <div className="relative hidden w-[12%] lg:mt-[272px] lg:mb-[50px] lg:block">
+      <div className="relative aspect-[189/199] w-[48.5vw] md:col-[1/4] md:row-[3] md:aspect-auto md:w-auto">
         <Image
           src="/schedule-shells.webp"
           alt=""
           aria-hidden="true"
           fill
-          sizes="12vw"
-          className="object-cover object-[10%_50%]"
+          sizes="(min-width: 768px) 12vw, 49vw"
+          className="object-cover"
         />
       </div>
 
-      {/* Text content */}
-      <div className="flex flex-1 flex-col px-8 py-16 md:px-16 md:pt-[140px] md:pb-[70px] lg:px-[8%]">
-        <p className="text-[15px] tracking-[0.15em] text-foreground uppercase">
-          Schedule an appointment
-        </p>
+      <p className="mt-[62px] px-gutter text-eyebrow font-normal uppercase md:col-[6/16] md:row-[1] md:mt-0 md:px-0">
+        Schedule an appointment
+      </p>
 
-        <h2 className="mt-14 max-w-[720px] font-serif text-[40px] font-light leading-[1.4] tracking-tight text-foreground sm:text-[48px] md:mt-28 lg:mt-32 lg:text-[54px]">
+      <div className="mt-(--sched-eb-h2) flex flex-col px-gutter md:col-[6/16] md:row-[3] md:mt-0 md:px-0 md:pb-(--sched-btn-bottom)">
+        <h2 className="font-serif text-h2 font-extralight">
           Find a therapist who is the right fit for{" "}
-          <span className="font-script text-[60px] leading-none text-accent-teal sm:text-[70px] lg:text-[80px]">
-            you
-          </span>
-          .
+          <span className="script">you</span>.
         </h2>
-
-        <div className="mt-8 flex max-w-[720px] flex-col gap-5 text-[17px] leading-[1.8] text-foreground">
-          <p>
-            Coming to therapy is a courageous decision, and connecting with the
-            right kind of therapist makes all the difference. We understand
-            that your journey is personal, and we&apos;re here to support you
-            with care and understanding every step of the way. Each member of
-            our team brings dedicated expertise and a commitment to support
-            you in your struggles. We want you to feel prioritized,
-            understood, and empowered.
-          </p>
-          <p>Click the button below to schedule an appointment.</p>
-        </div>
-
-        <Link
-          href="#contact"
-          className="mt-12 w-fit rounded-full border border-foreground px-[19.5px] py-[15px] text-[11.5px] tracking-[0.12em] text-foreground uppercase hover:bg-foreground hover:text-background md:mt-auto"
-        >
-          Book Now
-        </Link>
+        <p className="mt-(--sched-h2-p) text-body font-light">
+          Coming to therapy is a courageous decision, and connecting with the
+          right kind of therapist makes all the difference. We understand that
+          your journey is personal, and we’re here to support you with care and
+          understanding every step of the way. Each member of our team brings
+          dedicated expertise and a commitment to support you in your
+          struggles. We want you to feel prioritized, understood, and
+          empowered.
+        </p>
+        <p className="mt-[15px] mb-(--sched-p2-btn) text-body font-light">
+          Click the button below to schedule an appointment.
+        </p>
+        <PillLink href="#contact" className="md:mt-auto">
+          Book now
+        </PillLink>
       </div>
 
-      {/* Right image - flush to the viewport edge */}
-      <div className="relative h-[420px] w-full md:mt-[128px] md:mb-[50px] md:h-auto md:w-[34.5%]">
+      <div className="relative mt-[52px] ml-auto aspect-[322/269] w-[82.6vw] md:col-[18/27] md:row-[1/4] md:mt-0 md:ml-0 md:aspect-auto md:min-h-[calc(39.3*var(--u))] md:w-auto">
         <Image
           src="/schedule-sand.webp"
           alt="An adult pointing at seashells in the sand next to a child's bare feet"
           fill
-          sizes="(min-width: 768px) 35vw, 100vw"
+          sizes="(min-width: 768px) 35vw, 83vw"
           className="object-cover"
         />
       </div>

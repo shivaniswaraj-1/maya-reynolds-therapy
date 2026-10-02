@@ -13,8 +13,9 @@ import Contact from "@/components/home/Contact";
 export default function Home() {
   return (
     <div className="flex flex-col bg-background">
-      <div className="flex min-h-screen flex-1 flex-col">
-        <Navbar />
+      <Navbar />
+      {/* Hero fills the rest of the first screen below the sticky header */}
+      <div className="flex min-h-[calc(100svh-96px)] flex-1 flex-col lg:min-h-[calc(100svh-112px)]">
         <Hero />
       </div>
       <Struggle />
