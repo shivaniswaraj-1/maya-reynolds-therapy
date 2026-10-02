@@ -37,7 +37,7 @@ export default function Hero() {
         </p>
 
         <Link
-          href="#contact"
+          href="/#contact"
           className="mt-8 w-fit border-b border-foreground pb-1 text-[11.5px] tracking-[0.12em] text-foreground uppercase md:mt-10"
         >
           Book an Appointment

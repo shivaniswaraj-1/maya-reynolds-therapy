@@ -3,15 +3,16 @@ import { serif, sans, script } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Conejo Valley Family Counseling",
+  title: "Dr. Maya Reynolds, PsyD | Therapy in Santa Monica, CA",
   description:
-    "Online & in-person counseling in Newbury Park & across CA.",
+    "Licensed clinical psychologist in Santa Monica offering therapy for anxiety, panic, trauma, and burnout. In-person sessions and telehealth across California.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${sans.variable} ${serif.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>

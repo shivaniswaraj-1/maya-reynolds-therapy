@@ -5,12 +5,14 @@
   --background: #f6f4ee;
   --foreground: #2b2b2b;
   --accent-teal: #86b3b3;
+  --accent-sand: #e3d9ca;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent-teal: var(--accent-teal);
+  --color-accent-sand: var(--accent-sand);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-script: var(--font-script);
@@ -23,9 +25,29 @@
 */
 html {
   background: var(--background);
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/*
+  Scroll-reveal: <Reveal> marks elements with [data-reveal] and adds
+  [data-shown] once they enter the viewport. Content is only hidden when
+  scripts can run and the visitor hasn't asked for reduced motion, so
+  nothing ever stays invisible.
+*/
+[data-reveal] {
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal]:not([data-shown]) {
+    opacity: 0;
+    transform: translateY(32px);
+  }
 }

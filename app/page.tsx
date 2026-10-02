@@ -1,8 +1,14 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import HopeSection from "@/components/HopeSection";
-import WhoWeHelp from "@/components/WhoWeHelp";
-import StorySection from "@/components/StorySection";
+import Footer from "@/components/Footer";
+import Hero from "@/components/home/Hero";
+import Struggle from "@/components/home/Struggle";
+import QuoteBanner from "@/components/home/QuoteBanner";
+import FocusAreas from "@/components/home/FocusAreas";
+import Approach from "@/components/home/Approach";
+import Specialties from "@/components/home/Specialties";
+import Methods from "@/components/home/Methods";
+import Office from "@/components/home/Office";
+import Contact from "@/components/home/Contact";
 
 export default function Home() {
   return (
@@ -11,9 +17,15 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-      <HopeSection />
-      <WhoWeHelp />
-      <StorySection />
+      <Struggle />
+      <QuoteBanner />
+      <FocusAreas />
+      <Approach />
+      <Specialties />
+      <Methods />
+      <Office />
+      <Contact />
+      <Footer />
     </div>
   );
 }
