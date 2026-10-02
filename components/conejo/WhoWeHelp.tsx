@@ -4,7 +4,7 @@ import styles from "@/components/layout/site-grid.module.css";
 const CATEGORIES = [
   {
     title: "Adults",
-    image: "/who-adults.jpg",
+    image: "/conejo/who-adults.jpg",
     alt: "Two people sitting on the beach, facing a lake with mountains in the background.",
     column: "md:col-[5/12]",
     description:
@@ -12,7 +12,7 @@ const CATEGORIES = [
   },
   {
     title: "Couples",
-    image: "/who-couples.jpg",
+    image: "/conejo/who-couples.jpg",
     alt: "A smiling couple embracing on the beach with the ocean behind them.",
     column: "md:col-[12/19]",
     description:
@@ -20,7 +20,7 @@ const CATEGORIES = [
   },
   {
     title: "Children & Teens",
-    image: "/who-children.jpg",
+    image: "/conejo/who-children.jpg",
     alt: "A boy carrying a girl on a beach with waves in the background.",
     column: "md:col-[19/26]",
     description:

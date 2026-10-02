@@ -8,7 +8,7 @@ export default function HonoringSection() {
       {/* Photo flush to the left edge (flush right on mobile) */}
       <div className="relative ml-gutter aspect-[367/304] md:col-[1/15] md:ml-0 md:aspect-auto md:min-h-[calc(36.6*var(--u))]">
         <Image
-          src="/honoring-family.webp"
+          src="/conejo/honoring-family.webp"
           alt="A family holding hands while standing in the ocean shallows"
           fill
           sizes="(min-width: 768px) 54vw, 94vw"

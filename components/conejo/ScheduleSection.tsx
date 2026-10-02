@@ -17,7 +17,7 @@ export default function ScheduleSection() {
     >
       <div className="relative aspect-[189/199] w-[48.5vw] md:col-[1/4] md:row-[3] md:aspect-auto md:w-auto">
         <Image
-          src="/schedule-shells.webp"
+          src="/conejo/schedule-shells.webp"
           alt=""
           aria-hidden="true"
           fill
@@ -54,7 +54,7 @@ export default function ScheduleSection() {
 
       <div className="relative mt-[52px] ml-auto aspect-[322/269] w-[82.6vw] md:col-[18/27] md:row-[1/4] md:mt-0 md:ml-0 md:aspect-auto md:min-h-[calc(39.3*var(--u))] md:w-auto">
         <Image
-          src="/schedule-sand.webp"
+          src="/conejo/schedule-sand.webp"
           alt="An adult pointing at seashells in the sand next to a child's bare feet"
           fill
           sizes="(min-width: 768px) 35vw, 83vw"

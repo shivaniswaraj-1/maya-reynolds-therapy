@@ -4,7 +4,7 @@ export default function StorySection() {
   return (
     <section className="relative flex min-h-[66vh] items-center overflow-hidden bg-cv-ink px-gutter pt-(--story-pt) pb-(--story-pb) md:items-end md:pl-[calc(8.75vw_+_0.5px)]">
       <Image
-        src="/story-banner.png"
+        src="/conejo/story-banner.png"
         alt="Two children running along a foggy beach"
         fill
         sizes="100vw"

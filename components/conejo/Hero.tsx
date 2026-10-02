@@ -15,7 +15,7 @@ export default function Hero() {
     >
       <div className="relative order-3 mt-[59px] aspect-[278/304] md:order-none md:col-[1/10] md:row-[1/4] md:mt-0 md:aspect-auto md:min-h-(--hero-img-min)">
         <Image
-          src="/hero-family.jpg"
+          src="/conejo/hero-family.jpg"
           alt="Family walking together on the beach"
           fill
           priority
@@ -45,7 +45,7 @@ export default function Hero() {
       {/* Photo sliver at the right edge */}
       <div className="relative order-4 mt-[59px] aspect-[57/199] w-[14.6vw] self-end justify-self-end md:order-none md:col-[25/27] md:row-[3] md:-mt-(--hero-sliver-rise) md:aspect-auto md:w-auto md:self-stretch md:justify-self-stretch">
         <Image
-          src="/hero-edge.jpg"
+          src="/conejo/hero-edge.jpg"
           alt=""
           aria-hidden="true"
           fill

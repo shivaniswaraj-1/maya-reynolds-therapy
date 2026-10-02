@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="md:col-[2/10] md:row-[1]">
           <Link href="/conejo-clone" className="ml-edge block w-[82.6vw] md:ml-0 md:w-[calc(26.25vw_-_8px)]">
             <Image
-              src="/conejo-logo.png"
+              src="/conejo/conejo-logo.png"
               alt="Conejo Valley Family Counseling"
               width={1500}
               height={438}

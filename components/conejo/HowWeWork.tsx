@@ -54,7 +54,7 @@ export default function HowWeWork() {
 
       <div className="relative mt-[47px] aspect-[343/269] [grid-area:img] md:col-[21/27] md:row-[1/5] md:mt-0 md:ml-[6.3px] md:aspect-auto md:min-h-(--how-img-min)">
         <Image
-          src="/how-we-work.webp"
+          src="/conejo/how-we-work.webp"
           alt="Mother and daughter dancing together on a sandy beach at sunset"
           fill
           sizes="(min-width: 768px) 24vw, 88vw"

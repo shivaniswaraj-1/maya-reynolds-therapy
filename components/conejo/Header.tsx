@@ -47,7 +47,7 @@ const NAV: NavItem[] = [
 function Logo({ priority = false }: { priority?: boolean }) {
   return (
     <Image
-      src="/conejo-logo.png"
+      src="/conejo/conejo-logo.png"
       alt="Conejo Valley Family Counseling"
       width={1500}
       height={438}

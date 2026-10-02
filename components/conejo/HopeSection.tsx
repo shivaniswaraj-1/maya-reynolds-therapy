@@ -41,7 +41,7 @@ export default function HopeSection() {
 
       <div className="relative mt-[45px] aspect-[343/234] [grid-area:img] md:col-[19/27] md:row-[1/3] md:mt-0 md:ml-[5.7px] md:aspect-auto md:min-h-(--hope-img-min)">
         <Image
-          src="/hope-ocean.jpg"
+          src="/conejo/hope-ocean.jpg"
           alt="Sandy beach with gentle ocean waves under a cloudy sky"
           fill
           sizes="(min-width: 768px) 31vw, 88vw"
